@@ -37,7 +37,7 @@ public class WhiskyTrackerApplicationTests {
 	@Test
 	public void canFindDistilleryByRegion(){
 		List<Distillery> found = distilleryRepository.getDistilleryByRegion("Speyside");
-		assertEquals("Macallan", found.get(0).getName());
+		assertEquals(2, found.size());
 	}
 
 }
