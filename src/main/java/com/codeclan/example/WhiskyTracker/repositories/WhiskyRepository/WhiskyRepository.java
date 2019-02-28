@@ -8,5 +8,8 @@ import java.util.List;
 public interface WhiskyRepository extends JpaRepository<Whisky, Long>, WhiskyRepositoryCustom {
 
 	List<Whisky> getWhiskyByYear(int year);
-	List<Whisky> findWhiskyByAgeThatHaveDistillery(Long id);
+	List<Whisky> findWhiskyBYDistilleryId(Long id);
+
+	// Spring Data JPA Method ("Derived") Query (no body needed)
+	List<Whisky> findWhiskyByDistilleryIdAndAge(Long distilleryId, int age);
 }
